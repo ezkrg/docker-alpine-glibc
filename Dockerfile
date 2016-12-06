@@ -8,7 +8,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
  && echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories \
  && echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
  && apk add --update --no-cache --virtual .build-dependencies xz binutils patchelf \
- && wget -O /tmp/libc6_2.24-5_amd64.deb http://ftp.debian.org/debian/pool/main/g/glibc/libc6_2.24-5_amd64.deb \
+ && wget -O /tmp/libc6_2.24-5_amd64.deb http://ftp.debian.org/debian/pool/main/g/glibc/libc6_2.24-8_amd64.deb \
  && wget -O /tmp/libgcc1_4.9.2-10_amd64.deb http://ftp.debian.org/debian/pool/main/g/gcc-4.9/libgcc1_4.9.2-10_amd64.deb \
  && wget -O /tmp/libstdc++6_4.9.2-10_amd64.deb http://ftp.debian.org/debian/pool/main/g/gcc-4.9/libstdc++6_4.9.2-10_amd64.deb \
  && cd /tmp \
