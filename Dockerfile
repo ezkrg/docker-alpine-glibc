@@ -11,9 +11,9 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
  && echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories \
  && echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
  && apk add --update --no-cache --virtual .build-dependencies xz binutils patchelf \
- && wget -O /tmp/libc6_$LIBC6_VER_amd64.deb http://ftp.debian.org/debian/pool/main/g/glibc/libc6_$LIBC6_VER_amd64.deb \
- && wget -O /tmp/libgcc1_$GCC_VER_amd64.deb http://ftp.debian.org/debian/pool/main/g/gcc-4.9/libgcc1_$GCC_VER_amd64.deb \
- && wget -O /tmp/libstdc++6_$GCC_VER_amd64.deb http://ftp.debian.org/debian/pool/main/g/gcc-4.9/libstdc++6_$GCC_VER_amd64.deb \
+ && wget -O /tmp/libc6_${LIBC6_VER}_amd64.deb http://ftp.debian.org/debian/pool/main/g/glibc/libc6_${LIBC6_VER}_amd64.deb \
+ && wget -O /tmp/libgcc1_${GCC_VER}_amd64.deb http://ftp.debian.org/debian/pool/main/g/gcc-4.9/libgcc1_${GCC_VER}_amd64.deb \
+ && wget -O /tmp/libstdc++6_${GCC_VER}_amd64.deb http://ftp.debian.org/debian/pool/main/g/gcc-4.9/libstdc++6_${GCC_VER}_amd64.deb \
  && cd /tmp \
  && for pkg in $DEBS; do \
         mkdir $pkg; \
