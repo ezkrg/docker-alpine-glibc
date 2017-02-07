@@ -4,7 +4,7 @@ ENV DESTDIR="/glibc" \
     GLIBC_LIBRARY_PATH="$DESTDIR/lib" \
     DEBS="libc6 libgcc1 libstdc++6" \
     GLIBC_LD_LINUX_SO="$GLIBC_LIBRARY_PATH/ld-linux-x86-64.so.2" \
-    LIBC6_VER="2.24-8" \
+    LIBC6_VER="2.24-9" \
     GCC_VER="4.9.2-10"
 
 RUN apk add --update --no-cache --virtual .build-dependencies xz binutils patchelf \
